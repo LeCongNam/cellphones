@@ -1,0 +1,33 @@
+#content{
+
+    & h2{
+        font-size: 22px;
+    }
+
+
+    & .list__tag{
+        display: flex;
+        min-width: 672px;
+        justify-content: flex-end;
+
+
+        & li{
+            margin-left: 6px;
+            background-color: #f3f4f6;
+            border-radius: 10px;
+            font-size: 14px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+
+            & .button__related_tag {
+                padding: 5px 10px;
+                color: #444;
+                cursor: pointer;
+            }
+
+            
+        }
+
+
+    }
+}

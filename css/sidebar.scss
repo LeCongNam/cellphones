@@ -1,0 +1,125 @@
+@import "./main.scss";
+
+.mt-74 {
+  margin-top: calc(64px + 10px);
+}
+
+.sidebar {
+  $width_sidebar: 205px;
+  width: $width_sidebar;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+  border-radius: 15px;
+  position: relative;
+  margin: 0;
+
+  & span {
+    margin-left: 5px;
+    padding-left: 10px;
+  }
+
+  & img {
+    width: 25px;
+    height: 25px;
+  }
+
+  & li {
+    display: flex;
+    width: 100%;
+
+    & .list__child {
+      background-color: #ccc;
+      margin-top: 16px;
+
+      & .child__item {
+        padding: 5px 0;
+        border: 1px solid #000;
+      }
+    }
+  }
+  & li:hover {
+    cursor: pointer;
+  }
+
+  & li:hover .sidebar__details {
+    cursor: pointer;
+    visibility: visible;
+  }
+
+  & .item__container {
+    padding: 3px 10px;
+    width: 100%;
+    display: flex;
+
+    & .item__title {
+      flex: 1;
+    }
+  }
+
+  &__details {
+    visibility: hidden;
+    width: calc(1200px - $width_sidebar);
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%),
+      0 2px 6px 2px rgb(60 64 67 / 15%);
+    left: calc($width_sidebar + 1px);
+    border-radius: 0 10px 10px 10px;
+    top: 0;
+    min-height: 375px;
+    background-color: #fff;
+  }
+}
+
+#slider {
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+  overflow: hidden;
+  border-radius: 15px;
+
+  .list__subtitle {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0;
+
+    #carouselExampleControls {
+      max-width: 711px;
+
+      & img {
+        border-radius: 12px;
+      }
+
+      & .bg__icon-slide{
+        background-color: #000;
+        padding: 20px;
+        display: block;
+      }
+    }
+
+    & li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 24px 22px;
+
+      & span {
+        font-size: 12px;
+      }
+    }
+
+    & li.active {
+      border-bottom: 3px solid $base-color;
+    }
+
+
+    & li:hover{
+      background-color: #f3f4f6;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,29 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/header.css">
-    <link rel="stylesheet" href="./public/css/breadcrumb.css">
+    <link rel="stylesheet" href="./public/css/sidebar.css">
+    <link rel="stylesheet" href="./public/css/content.css">
+
 </head>
 
 <body>
-    <div id="app">
-        <div id="menu-top">
-            <div class="pulsingButton">Black Fire-Day - Sale lớn nhất năm - Mua ngay!</div>
-            <div id="header">
-                <section>
-                    <a href="#" class="logo">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhIAAABfCAYAAAC9ZC4kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6REQzNUE1OThENjI3MTFFQUJDOTI5NjNDMjAyQkNFMkQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6REQzNUE1OTlENjI3MTFFQUJDOTI5NjNDMjAyQkNFMkQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpERDM1QTU5NkQ2MjcxMUVBQkM5Mjk2M0MyMDJCQ0UyRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpERDM1QTU5N0Q2MjcxMUVBQkM5Mjk2M0MyMDJCQ0UyRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtMJt2kAAAPtSURBVHja7Nzbbts6FEDB0ND//zL7mhg1oqoSuS8zjwdBj8SbV4RYY875BQBwxcsQAABCAgAQEgCAkAAAhAQAgJAAAB5wGIJyznyfdwT4N7vPg/GCOGdid/91HnkiYWPZhHvG17gCJXgiAYDfuv3Sc5knEgCAkAAAhAQAICQAACEBACAkAAAhAQAICQCgBi+kAoCfMr95dvmLtzyRAACEBAAgJAAAIQEACAkAACEBAAgJAEBIAABCAgBo7uk3W+54O9hIeu3Dcty2ZnaN/yx6b7PovM3C69F5l/M+QryB86h8c8muezaPihno/z8Kj+0oNn9P39s0Z/Zb8JDZ/nl7FFqYla57NtpgM/A1jaLjPYrO393zNt2X/SYmfvd6YDH4IDOmVe5vFh73WXh8ZpDxibgenXeEDQkRYXOJnV73JgLNmXmLY+vTHN/awIFB1bmb1iViIkdIeBrhWn1wujdjIZCczU1j4uh2wwGu28F9fQxGwY1v7p7/APVHfM67p/dE6zV2JFuUFaJn+FAz/o0Owifmzrzlm7Pq89Y6JlaGxAg26RGue3w5FLuP/9i4trPO3RPzNjff45Pz5rwTE4/yx5Z54sf4u7+z/+YIMHaj+Nq4e4w7zFkHLX8xfFmgPiyxtjCuxu6262wXE55IAMT5IBQpseb66pOiVjEhJADgXFSICSEBAMuCokVMCAkAuBYUZ6JiVg8MIbGfr38C5I+KKzFR4vw/rAEf8gDOu1uC4rdwGN9+dr79bNo/tPVEAgDuj4px4mfeQyNlzAkJAHg2KD693v1vsZEuKIQEAKyLijMxkSoohAQArA2KM//tPSjCRoWQAICYgfEpKoQEAHApJsIFha9/3jOpAM47Vgvx1VFPJAAgd9BtfUIhJAAgf0x87YoJIQEAdWJCSAAAeWJiVUh4hzsAFIwJTyQEEIDzTkykCIlpc2Fuja25syeo5bVhkUZYqMPman9YmtOc42zunHcEs+uFVDPQpsmyuTq+LMaBZh7pOWdejpXIq/GEW6hYK/XHwtwZh6shJYAXhgQ4gI2J6wQh0XLDOmgAAcgnnkosDAkxQcVD19rIOT7mznknJpKGROYNbHNhPdQYK3NnjMTEYsfDC3Um3VwWjcOVXPvd/DnvVsSEdbYwJLJv7syLZRQaC+sn17XYNzmvxYejmAgdEgBQLSb4xtc/AQAhAQAICQBASAAAQgIAQEgAAEICABASAICQAACa82ZLAPjJa7D/gScSAICQAACEBAAgJAAAIQEAICQAACEBAAgJAKAGL6QCoINpCIQEdXhrHLDyvBERQgIA/PISkb+RAACEBAAgJAAAIQEAdPBHgAEAruC43nH9c2MAAAAASUVORK5CYII="
-                            id="logo-img" alt="">
-                    </a>
-                    <!-- Danh mục -->
-                    <div class="header-item">
-                        <div class="icon">
+
+    <header>
+        <div class="ctr">
+            <div id="logo">
+                <svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 269.231 50">
+                    <defs>
+                        <pattern id="patternLogo" preserveAspectRatio="xMidYMid slice" width="100%" height="100%"
+                            viewBox="0 0 530 95">
+                            <image width="530" height="95"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhIAAABfCAYAAAC9ZC4kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6REQzNUE1OThENjI3MTFFQUJDOTI5NjNDMjAyQkNFMkQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6REQzNUE1OTlENjI3MTFFQUJDOTI5NjNDMjAyQkNFMkQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpERDM1QTU5NkQ2MjcxMUVBQkM5Mjk2M0MyMDJCQ0UyRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpERDM1QTU5N0Q2MjcxMUVBQkM5Mjk2M0MyMDJCQ0UyRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtMJt2kAAAPtSURBVHja7Nzbbts6FEDB0ND//zL7mhg1oqoSuS8zjwdBj8SbV4RYY875BQBwxcsQAABCAgAQEgCAkAAAhAQAgJAAAB5wGIJyznyfdwT4N7vPg/GCOGdid/91HnkiYWPZhHvG17gCJXgiAYDfuv3Sc5knEgCAkAAAhAQAICQAACEBACAkAAAhAQAICQCgBi+kAoCfMr95dvmLtzyRAACEBAAgJAAAIQEACAkAACEBAAgJAEBIAABCAgBo7uk3W+54O9hIeu3Dcty2ZnaN/yx6b7PovM3C69F5l/M+QryB86h8c8muezaPihno/z8Kj+0oNn9P39s0Z/Zb8JDZ/nl7FFqYla57NtpgM/A1jaLjPYrO393zNt2X/SYmfvd6YDH4IDOmVe5vFh73WXh8ZpDxibgenXeEDQkRYXOJnV73JgLNmXmLY+vTHN/awIFB1bmb1iViIkdIeBrhWn1wujdjIZCczU1j4uh2wwGu28F9fQxGwY1v7p7/APVHfM67p/dE6zV2JFuUFaJn+FAz/o0Owifmzrzlm7Pq89Y6JlaGxAg26RGue3w5FLuP/9i4trPO3RPzNjff45Pz5rwTE4/yx5Z54sf4u7+z/+YIMHaj+Nq4e4w7zFkHLX8xfFmgPiyxtjCuxu6262wXE55IAMT5IBQpseb66pOiVjEhJADgXFSICSEBAMuCokVMCAkAuBYUZ6JiVg8MIbGfr38C5I+KKzFR4vw/rAEf8gDOu1uC4rdwGN9+dr79bNo/tPVEAgDuj4px4mfeQyNlzAkJAHg2KD693v1vsZEuKIQEAKyLijMxkSoohAQArA2KM//tPSjCRoWQAICYgfEpKoQEAHApJsIFha9/3jOpAM47Vgvx1VFPJAAgd9BtfUIhJAAgf0x87YoJIQEAdWJCSAAAeWJiVUh4hzsAFIwJTyQEEIDzTkykCIlpc2Fuja25syeo5bVhkUZYqMPman9YmtOc42zunHcEs+uFVDPQpsmyuTq+LMaBZh7pOWdejpXIq/GEW6hYK/XHwtwZh6shJYAXhgQ4gI2J6wQh0XLDOmgAAcgnnkosDAkxQcVD19rIOT7mznknJpKGROYNbHNhPdQYK3NnjMTEYsfDC3Um3VwWjcOVXPvd/DnvVsSEdbYwJLJv7syLZRQaC+sn17XYNzmvxYejmAgdEgBQLSb4xtc/AQAhAQAICQBASAAAQgIAQEgAAEICABASAICQAACa82ZLAPjJa7D/gScSAICQAACEBAAgJAAAIQEAICQAACEBAAgJAKAGL6QCoINpCIQEdXhrHLDyvBERQgIA/PISkb+RAACEBAAgJAAAIQEAdPBHgAEAruC43nH9c2MAAAAASUVORK5CYII=">
+                            </image>
+                        </pattern>
+                    </defs>
+                    <rect id="header__logo--bg" width="269.231" height="50" fill="url(#patternLogo)"></rect>
+                </svg>
+            </div>
+            <ul class="menu__left">
+                <li>
+                    <div class="header__item opacity">
+                        <div class="item__left">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.99 26.99">
                                 <defs>
                                     <style>
@@ -47,11 +62,14 @@
                                 </g>
                             </svg>
                         </div>
-                        <span>Danh mục</span>
+                        <div class="item__right">
+                            Danh mục
+                        </div>
                     </div>
-                    <!-- Vị trí -->
-                    <div class="header-item">
-                        <div class="icon">
+                </li>
+                <li>
+                    <div class="header__item opacity">
+                        <div class="item__left">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.22 30.36" width="25" height="25">
                                 <defs></defs>
                                 <g id="Layer_2" data-name="Layer 2">
@@ -65,10 +83,12 @@
                                 </g>
                             </svg>
                         </div>
-                        <span>
-                            <span class="text-btn-top">
+                        <div class="item__right">
+                            <div class="top">
                                 <span>
                                     Xem giá tại
+                                </span>
+                                <span>
                                     <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
                                         width="10" height="10">
                                         <path
@@ -76,27 +96,34 @@
                                         </path>
                                     </svg>
                                 </span>
-                                <span>Hồ chí minh</span>
-                            </span>
-                        </span>
+                            </div>
+                            <div class="bottom">
+                                <span>Hồ Chí Minh</span>
+                            </div>
+                        </div>
                     </div>
+                </li>
+            </ul>
 
-                    <!-- Search -->
-                    <div class="search">
-                        <span>
-                            <svg height="15" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search"
-                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                class="svg-inline--fa fa-search">
-                                <path fill="currentColor"
-                                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-                                </path>
-                            </svg>
-                        </span>
-                        <input type="text" class="search-inp" placeholder="...điện thoại, macbook">
-                    </div>
-                    <!-- Hot line -->
-                    <div class="header-item bgc_rm">
-                        <div class="icon">
+            <!-- Search  -->
+            <div class="search">
+                <div class="icon__search">
+                    <svg height="15" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        class="svg-inline--fa fa-search">
+                        <path fill="currentColor"
+                            d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                        </path>
+                    </svg>
+                </div>
+                <input type="text" name="" id="search__input" placeholder="Bạn cần tìm gì...">
+            </div>
+
+
+            <ul class="menu__right">
+                <li>
+                    <div class="header__item">
+                        <div class="item__left">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.83 30.94" width="24" height="24">
                                 <defs>
                                     <style>
@@ -118,18 +145,21 @@
                                 </g>
                             </svg>
                         </div>
-                        <span>
-                            <span class="text-btn-top">
+                        <div class="item__right">
+                            <div class="top">
                                 <span>
                                     Gọi mua hàng
                                 </span>
+                            </div>
+                            <div class="bottom">
                                 <span>1800.2097</span>
-                            </span>
-                        </span>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Cửa hàng gần bạn -->
-                    <div class="header-item bgc_rm">
-                        <div class="icon">
+                </li>
+                <li>
+                    <div class="header__item">
+                        <div class="item__left">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.22 30.36" width="25" height="25">
                                 <defs>
                                     <style>
@@ -153,18 +183,21 @@
                                 </g>
                             </svg>
                         </div>
-                        <span>
-                            <span class="text-btn-top">
+                        <div class="item__right">
+                            <div class="top">
                                 <span>
                                     Cửa hàng
                                 </span>
-                                <span>gần bạn </span>
-                            </span>
-                        </span>
+                            </div>
+                            <div class="bottom">
+                                <span>gần bạn</span>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Tra cứu đơn  hàng -->
-                    <div class="header-item bgc_rm">
-                        <div class="icon">
+                </li>
+                <li>
+                    <div class="header__item">
+                        <div class="item__left">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.22 25.85" height="24">
                                 <defs>
                                     <style>
@@ -193,7 +226,7 @@
                                 <g id="Layer_2" data-name="Layer 2">
                                     <g id="Layer_1-2" data-name="Layer 1">
                                         <circle cx="7.66" cy="22.02" r="3" class="cls-1"></circle>
-                                        <circle cx="24.79" cy="22.02" r="3" class="cls-2"></circle>
+                                        <circle cx="24.79" cy="22.02" r="3" class="cls-1"></circle>
                                         <path d="M28.61,22h4.13a1.44,1.44,0,0,0,1.44-1.44v-6" class="cls-3"></path>
                                         <path
                                             d="M27.12.9H14.82a1.44,1.44,0,0,0-1.44,1.44V20.58A1.44,1.44,0,0,0,14.82,22h6.29"
@@ -209,20 +242,21 @@
                                 </g>
                             </svg>
                         </div>
-                        <span>
-                            <span class="text-btn-top">
+                        <div class="item__right">
+                            <div class="top">
                                 <span>
                                     Tra cứu
                                 </span>
-                                <span>
-                                    đơn hàng
-                                </span>
-                            </span>
-                        </span>
+                            </div>
+                            <div class="bottom">
+                                <span>Đơn hàng</span>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Giỏ hàng -->
-                    <div class="header-item bgc_rm cart">
-                        <div class="icon">
+                </li>
+                <li>
+                    <div class="header__item cart">
+                        <div class="item__left">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.95 35.07" width="25" height="25">
                                 <defs>
                                     <style>
@@ -246,352 +280,481 @@
                                     </g>
                                 </g>
                             </svg>
-                            <span class="total__cart">0</span>
                         </div>
-                        <span>
-                            <span class="text-btn-top">
+                        <div class="item__right">
+                            <div class="top">
                                 <span>
                                     Giỏ
                                 </span>
+                            </div>
+                            <div class="bottom">
                                 <span>hàng</span>
-                            </span>
-                        </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="header-item login">
-                        <span>
-                            <svg id="icon-smember" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" width="20">
-                                <defs>
-                                    <style>
-                                        #icon-smember .cls-1 {
-                                            fill: none;
-                                            stroke: #fff;
-                                            stroke-width: 30px;
-                                        }
-                                    </style>
-                                </defs>
-                                <title>Smember</title>
-                                <g id="Layer_2" data-name="Layer 2">
-                                    <g id="Layer_1-2" data-name="Layer 1">
-                                        <circle cx="280" cy="280" r="265" class="cls-1"></circle>
-                                        <circle cx="280" cy="210" r="115" class="cls-1"></circle>
-                                        <path
-                                            d="M86.82,461.4C124.71,354.71,241.91,298.93,348.6,336.82A205,205,0,0,1,473.18,461.4"
-                                            class="cls-1"></path>
-                                    </g>
+                </li>
+                <li>
+                    <div class="info">
+                        <svg id="icon-smember" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" width="20">
+                            <defs>
+                                <style>
+                                    #icon-smember .cls-1 {
+                                        fill: none;
+                                        stroke: #fff;
+                                        stroke-width: 30px;
+                                    }
+                                </style>
+                            </defs>
+                            <title>Smember</title>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <circle cx="280" cy="280" r="265" class="cls-1"></circle>
+                                    <circle cx="280" cy="210" r="115" class="cls-1"></circle>
+                                    <path
+                                        d="M86.82,461.4C124.71,354.71,241.91,298.93,348.6,336.82A205,205,0,0,1,473.18,461.4"
+                                        class="cls-1"></path>
                                 </g>
-                            </svg>
-                        </span>
-                        <span class="text-login">Đăng nhập</span>
+                            </g>
+                        </svg>
+                        <span>Đăng nhập</span>
                     </div>
-                </section>
-            </div>
-            <div id="bread__crumb">
-                <ul class="list-breadcrumbs">
-                    <li>
-                        <a href="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10.633" viewBox="0 0 12 10.633">
-                                <path id="home"
-                                    d="M13.2,9.061H12.1v3.965a.6.6,0,0,1-.661.661H8.793V9.721H6.15v3.965H3.507a.6.6,0,0,1-.661-.661V9.061h-1.1c-.4,0-.311-.214-.04-.494L7,3.259a.634.634,0,0,1,.936,0l5.3,5.307c.272.281.356.495-.039.495Z"
-                                    transform="translate(-1.471 -3.053)" fill="#d70018"></path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="ic-home">
-                        <a href="">Trang chủ</a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                <path
-                                    d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
-                                </path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Hàng cũ
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                                <path
-                                    d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
-                                </path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Điện thoại cũ
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                </li>
+            </ul>
         </div>
-        <div class="center">
-            <div id="category__list">
-                <a href="#" class="btn_category">Apple iPhone cũ</a>
-                <a href="#" class="btn_category">Samsung cũ</a>
-                <a href="#" class="btn_category">Xiaomi cũ</a>
-                <a href="#" class="btn_category">Oppo cũ</a>
-                <a href="#" class="btn_category">Vivo cũ</a>
-                <a href="#" class="btn_category">Realme cũ</a>
-                <a href="#" class="btn_category">Asus cũ</a>
-                <a href="#" class="btn_category">Nokia cũ</a>
-                <a href="#" class="btn_category">Vsmart cũ</a>
-                <a href="#" class="btn_category">Huawei cũ</a>
-            </div>
-            <div id="filter">
-                <p>Chọn theo tiêu chí</p>
-                <ul>
-                    <li class="filter__item">
-                        <a href="#">
-                            <span class="mr-1">
-                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    </header>
+
+    <div class="container mt-74">
+        <div class="row flex-nowrap">
+            <div class="col-2 ml-0">
+
+                <ul class="sidebar">
+                    <li class="item">
+                        <div class="item__container">
+                            <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon-cps-3.svg" alt="">
+                            <span class="item__title"> Điện thoại</span>
+                            <span>
+                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                     <path
-                                        d="M3.853 54.87C10.47 40.9 24.54 32 40 32H472C487.5 32 501.5 40.9 508.1 54.87C514.8 68.84 512.7 85.37 502.1 97.33L320 320.9V448C320 460.1 313.2 471.2 302.3 476.6C291.5 482 278.5 480.9 268.8 473.6L204.8 425.6C196.7 419.6 192 410.1 192 400V320.9L9.042 97.33C-.745 85.37-2.765 68.84 3.854 54.87L3.853 54.87z">
+                                        d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg>
+
+                                <!-- Content -->
+                                <div class="sidebar__details container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <ul class="list__child">
+                                                <li class="child__item">1</li>
+                                                <li class="child__item">2</li>
+                                                <li class="child__item">3</li>
+                                                <li class="child__item">4</li>
+                                                <li class="child__item">5</li>
+                                                <li class="child__item">6</li>
+                                                <li class="child__item">7</li>
+                                                <li class="child__item">8</li>
+                                                <li class="child__item">9</li>
+                                                <li class="child__item">10</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                        <div class="col">4</div>
+                                    </div>
+                                </div>
                             </span>
-                            <span>
-                                Bộ lọc
-                            </span>
-                        </a>
+                        </div>
                     </li>
-                    <li class="filter__item active">
-                        <a href="#">
-                            <span class="mr-1">
-                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <li class="item">
+                        <div class="item__container">
+                            <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon-cps-3.svg" alt="">
+                            <span class="item__title"> Điện thoại</span>
+                            <span>
+                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                     <path
-                                        d="M112 0C85.49 0 64 21.49 64 48V96H16C7.163 96 0 103.2 0 112C0 120.8 7.163 128 16 128H272C280.8 128 288 135.2 288 144C288 152.8 280.8 160 272 160H48C39.16 160 32 167.2 32 176C32 184.8 39.16 192 48 192H240C248.8 192 256 199.2 256 208C256 216.8 248.8 224 240 224H16C7.163 224 0 231.2 0 240C0 248.8 7.163 256 16 256H208C216.8 256 224 263.2 224 272C224 280.8 216.8 288 208 288H64V416C64 469 106.1 512 160 512C213 512 256 469 256 416H384C384 469 426.1 512 480 512C533 512 576 469 576 416H608C625.7 416 640 401.7 640 384C640 366.3 625.7 352 608 352V237.3C608 220.3 601.3 204 589.3 192L512 114.7C499.1 102.7 483.7 96 466.7 96H416V48C416 21.49 394.5 0 368 0H112zM544 237.3V256H416V160H466.7L544 237.3zM160 464C133.5 464 112 442.5 112 416C112 389.5 133.5 368 160 368C186.5 368 208 389.5 208 416C208 442.5 186.5 464 160 464zM528 416C528 442.5 506.5 464 480 464C453.5 464 432 442.5 432 416C432 389.5 453.5 368 480 368C506.5 368 528 389.5 528 416z">
+                                        d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg>
+
+                                <!-- Content -->
+                                <div class="sidebar__details container">
+                                    <div class="row">
+                                        <div class="col">1</div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                        <div class="col">4</div>
+                                    </div>
+                                </div>
                             </span>
-                            <span>
-                                Sẵn hàng
-                            </span>
-                        </a>
+                        </div>
                     </li>
-                    <li class="filter__item">
-                        <a href="#">
-                            <span class="mr-1">
-                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <li class="item">
+                        <div class="item__container">
+                            <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon-cps-3.svg" alt="">
+                            <span class="item__title"> Điện thoại</span>
+                            <span>
+                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                     <path
-                                        d="M512 64C547.3 64 576 92.65 576 128V384C576 419.3 547.3 448 512 448H64C28.65 448 0 419.3 0 384V128C0 92.65 28.65 64 64 64H512zM128 384C128 348.7 99.35 320 64 320V384H128zM64 192C99.35 192 128 163.3 128 128H64V192zM512 384V320C476.7 320 448 348.7 448 384H512zM512 128H448C448 163.3 476.7 192 512 192V128zM288 352C341 352 384 309 384 256C384 202.1 341 160 288 160C234.1 160 192 202.1 192 256C192 309 234.1 352 288 352z">
+                                        d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg>
+
+                                <!-- Content -->
+                                <div class="sidebar__details container">
+                                    <div class="row">
+                                        <div class="col">1</div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                        <div class="col">4</div>
+                                    </div>
+                                </div>
                             </span>
-                            <span>
-                                giá
-                            </span>
-                        </a>
+                        </div>
                     </li>
-                    <li class="filter__item">
-                        <a href="#">
-                            <span class="mr-1">
-                                Tình trạng máy
-                            </span>
+                    <li class="item">
+                        <div class="item__container">
+                            <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon-cps-3.svg" alt="">
+                            <span class="item__title"> Điện thoại</span>
                             <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="10" height="10">
+                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                     <path
-                                        d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z">
+                                        d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg>
+
+                                <!-- Content -->
+                                <div class="sidebar__details container">
+                                    <div class="row">
+                                        <div class="col">1</div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                        <div class="col">4</div>
+                                    </div>
+                                </div>
                             </span>
-                        </a>
+                        </div>
                     </li>
-                    <li class="filter__item">
-                        <a href="#">
-                            <span class="mr-1">
-                                Nhu cầu sử dụng
-                            </span>
+                    <li class="item">
+                        <div class="item__container">
+                            <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon-cps-3.svg" alt="">
+                            <span class="item__title"> Điện thoại</span>
                             <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="10" height="10">
+                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                     <path
-                                        d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z">
+                                        d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg>
+
+                                <!-- Content -->
+                                <div class="sidebar__details container">
+                                    <div class="row">
+                                        <div class="col">1</div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                        <div class="col">4</div>
+                                    </div>
+                                </div>
                             </span>
-                        </a>
+                        </div>
                     </li>
-                    <li class="filter__item">
-                        <a href="#">
-                            <span class="mr-1">
-                                Loại điện thoại
-                            </span>
+                    <li class="item">
+                        <div class="item__container">
+                            <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon-cps-3.svg" alt="">
+                            <span class="item__title"> Điện thoại</span>
                             <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="10" height="10">
+                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                     <path
-                                        d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z">
+                                        d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg>
+
+                                <!-- Content -->
+                                <div class="sidebar__details container">
+                                    <div class="row">
+                                        <div class="col">1</div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                        <div class="col">4</div>
+                                    </div>
+                                </div>
                             </span>
-                        </a>
+                        </div>
                     </li>
-                    <li class="filter__item">
-                        <a href="#">
-                            <span class="mr-1">
-                                Dung lượng ram
-                            </span>
+                    <li class="item">
+                        <div class="item__container">
+                            <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon-cps-3.svg" alt="">
+                            <span class="item__title"> Điện thoại</span>
                             <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="10" height="10">
+                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                     <path
-                                        d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z">
+                                        d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg>
+
+                                <!-- Content -->
+                                <div class="sidebar__details container">
+                                    <div class="row">
+                                        <div class="col">1</div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                        <div class="col">4</div>
+                                    </div>
+                                </div>
                             </span>
-                        </a>
+                        </div>
                     </li>
-                    <li class="filter__item">
-                        <a href="#">
-                            <span class="mr-1">
-                                Bộ nhớ trong
-                            </span>
+                    <li class="item">
+                        <div class="item__container">
+                            <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon-cps-3.svg" alt="">
+                            <span class="item__title"> Điện thoại</span>
                             <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="10" height="10">
+                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                     <path
-                                        d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z">
+                                        d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg>
+
+                                <!-- Content -->
+                                <div class="sidebar__details container">
+                                    <div class="row">
+                                        <div class="col">1</div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                        <div class="col">4</div>
+                                    </div>
+                                </div>
                             </span>
-                        </a>
+                        </div>
                     </li>
-                    <li class="filter__item">
-                        <a href="#">
-                            <span class="mr-1">
-                                tần số quét
-                            </span>
+                    <li class="item">
+                        <div class="item__container">
+                            <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon-cps-3.svg" alt="">
+                            <span class="item__title"> Điện thoại</span>
                             <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="10" height="10">
+                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                     <path
-                                        d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z">
+                                        d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg>
+
+                                <!-- Content -->
+                                <div class="sidebar__details container">
+                                    <div class="row">
+                                        <div class="col">1</div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                        <div class="col">4</div>
+                                    </div>
+                                </div>
                             </span>
-                        </a>
+                        </div>
                     </li>
-                    <li class="filter__item">
-                        <a href="#">
-                            <span class="mr-1">
-                                Hãng sản xuất
-                            </span>
+                    <li class="item">
+                        <div class="item__container">
+                            <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon-cps-3.svg" alt="">
+                            <span class="item__title"> Điện thoại</span>
                             <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="10" height="10">
+                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                     <path
-                                        d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z">
+                                        d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg>
+
+                                <!-- Content -->
+                                <div class="sidebar__details container">
+                                    <div class="row">
+                                        <div class="col">1</div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                        <div class="col">4</div>
+                                    </div>
+                                </div>
                             </span>
-                        </a>
+                        </div>
                     </li>
-                    <li class="filter__item">
-                        <a href="#">
-                            <span class="mr-1">
-                                Dòng máy
-                            </span>
+                    <li class="item">
+                        <div class="item__container">
+                            <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon-cps-3.svg" alt="">
+                            <span class="item__title"> Điện thoại</span>
                             <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="10" height="10">
+                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                     <path
-                                        d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z">
+                                        d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg>
+
+                                <!-- Content -->
+                                <div class="sidebar__details container">
+                                    <div class="row">
+                                        <div class="col">1</div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                        <div class="col">4</div>
+                                    </div>
+                                </div>
                             </span>
-                        </a>
+                        </div>
                     </li>
+                    <li class="item">
+                        <div class="item__container">
+                            <img src="https://cdn2.cellphones.com.vn/x/media/icons/menu/icon-cps-3.svg" alt="">
+                            <span class="item__title"> Điện thoại</span>
+                            <span>
+                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path
+                                        d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
+                                    </path>
+                                </svg>
+
+                                <!-- Content -->
+                                <div class="sidebar__details container">
+                                    <div class="row">
+                                        <div class="col">1</div>
+                                        <div class="col">2</div>
+                                        <div class="col">3</div>
+                                        <div class="col">4</div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+                    
                 </ul>
             </div>
-            <div id="sort">
-                <p>Sắp xếp theo</p>
-                <ul>
-                    <li class="filter__item">
-                        <a href="#">
-                            <span class="mr-1">
-                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                    <path
-                                        d="M416 288h-95.1c-17.67 0-32 14.33-32 32s14.33 32 32 32H416c17.67 0 32-14.33 32-32S433.7 288 416 288zM544 32h-223.1c-17.67 0-32 14.33-32 32s14.33 32 32 32H544c17.67 0 32-14.33 32-32S561.7 32 544 32zM352 416h-32c-17.67 0-32 14.33-32 32s14.33 32 32 32h32c17.67 0 31.1-14.33 31.1-32S369.7 416 352 416zM480 160h-159.1c-17.67 0-32 14.33-32 32s14.33 32 32 32H480c17.67 0 32-14.33 32-32S497.7 160 480 160zM192.4 330.7L160 366.1V64.03C160 46.33 145.7 32 128 32S96 46.33 96 64.03v302L63.6 330.7c-6.312-6.883-14.94-10.38-23.61-10.38c-7.719 0-15.47 2.781-21.61 8.414c-13.03 11.95-13.9 32.22-1.969 45.27l87.1 96.09c12.12 13.26 35.06 13.26 47.19 0l87.1-96.09c11.94-13.05 11.06-33.31-1.969-45.27C224.6 316.8 204.4 317.7 192.4 330.7z">
-                                    </path>
-                                </svg>
+            <div class="col-7 p-0 ml-5 mr-3">
+                <div id="slider">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img class="d-block w-100" src="./public/image/slide1.webp" alt="First slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="./public/image/slide2.webp" alt="Second slide">
+                          </div>
+                          <div class="carousel-item">
+                            <img class="d-block w-100" src="./public/image/slide3.webp" alt="Third slide">
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="bg__icon-slide" style="padding: 20px; border-radius: 50%; background-color: #000; display: flex; justify-content: left; align-items: center;">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             </span>
-                            <span>
-                                Bộ lọc
-                            </span>
+                          <span class="sr-only">Previous</span>
+                          
                         </a>
-                    </li>
-                    <li class="filter__item">
-                        <a href="#">
-                            <span class="mr-1">
-                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                    <path
-                                        d="M320 224H416c17.67 0 32-14.33 32-32s-14.33-32-32-32h-95.1c-17.67 0-32 14.33-32 32S302.3 224 320 224zM320 352H480c17.67 0 32-14.33 32-32s-14.33-32-32-32h-159.1c-17.67 0-32 14.33-32 32S302.3 352 320 352zM320 96h32c17.67 0 31.1-14.33 31.1-32s-14.33-32-31.1-32h-32c-17.67 0-32 14.33-32 32S302.3 96 320 96zM544 416h-223.1c-17.67 0-32 14.33-32 32s14.33 32 32 32H544c17.67 0 32-14.33 32-32S561.7 416 544 416zM192.4 330.7L160 366.1V64.03C160 46.33 145.7 32 128 32S96 46.33 96 64.03v302L63.6 330.7c-6.312-6.883-14.94-10.38-23.61-10.38c-7.719 0-15.47 2.781-21.61 8.414c-13.03 11.95-13.9 32.22-1.969 45.27l87.1 96.09c12.12 13.26 35.06 13.26 47.19 0l87.1-96.09c11.94-13.05 11.06-33.31-1.969-45.27C224.6 316.8 204.4 317.7 192.4 330.7z">
-                                    </path>
-                                </svg>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="bg__icon-slide" style="padding: 20px; border-radius: 50%; background-color: #000; display: flex; justify-content: left; align-items: center;">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             </span>
-                            <span>
-                                Sẵn hàng
-                            </span>
+                            <span class="sr-only">Next</span>
                         </a>
-                    </li>
-                    <li class="filter__item">
-                        <a href="#">
-                            <span class="mr-1">
-                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                    <path
-                                        d="M112 224c61.9 0 112-50.1 112-112S173.9 0 112 0 0 50.1 0 112s50.1 112 112 112zm0-160c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48 21.5-48 48-48zm224 224c-61.9 0-112 50.1-112 112s50.1 112 112 112 112-50.1 112-112-50.1-112-112-112zm0 160c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zM392.3.2l31.6-.1c19.4-.1 30.9 21.8 19.7 37.8L77.4 501.6a23.95 23.95 0 0 1-19.6 10.2l-33.4.1c-19.5 0-30.9-21.9-19.7-37.8l368-463.7C377.2 4 384.5.2 392.3.2z">
-                                    </path>
-                                </svg>
-                            </span>
-                            <span>
-                                giá
-                            </span>
-                        </a>
-                    </li>
-                    <li class="filter__item active">
-                        <a href="#">
-                            <span class="mr-1">
-                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                    <path
-                                        d="M279.6 160.4C282.4 160.1 285.2 160 288 160C341 160 384 202.1 384 256C384 309 341 352 288 352C234.1 352 192 309 192 256C192 253.2 192.1 250.4 192.4 247.6C201.7 252.1 212.5 256 224 256C259.3 256 288 227.3 288 192C288 180.5 284.1 169.7 279.6 160.4zM480.6 112.6C527.4 156 558.7 207.1 573.5 243.7C576.8 251.6 576.8 260.4 573.5 268.3C558.7 304 527.4 355.1 480.6 399.4C433.5 443.2 368.8 480 288 480C207.2 480 142.5 443.2 95.42 399.4C48.62 355.1 17.34 304 2.461 268.3C-.8205 260.4-.8205 251.6 2.461 243.7C17.34 207.1 48.62 156 95.42 112.6C142.5 68.84 207.2 32 288 32C368.8 32 433.5 68.84 480.6 112.6V112.6zM288 112C208.5 112 144 176.5 144 256C144 335.5 208.5 400 288 400C367.5 400 432 335.5 432 256C432 176.5 367.5 112 288 112z">
-                                    </path>
-                                </svg>
-                            </span>
-                            <span>
-                                Xem nhiều
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div id="list-product">
-                <div class="cart-item">
-                    <div class="percent">
-                        <img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 100"><title>Asset 1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><image width="256" height="100" xlink:href="data:image/png;base64,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"/></g></g></svg>'
-                            class="cart__img" alt="">
-                    </div>
-                    <div class="thumb-nail">
-                        <img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/2/_/2_61_8_2_1_4_1_1.jpg"  alt="">
-                    </div>
-                    <div class="product-name">iPhone 13 Pro Max 256GB - Cũ đẹp</div>
-                    <div class="price">
-                        <div class="sale__price">24.590.000 ₫</div>
-                        <div class="real__price">37.990.000 ₫</div>
-                    </div>
-                    <div class="filter__item support-old">Thu cũ lên đời - Trợ giá 300k</div>
-                    <div class="like"></div>
+                      </div>
+
+
+                    <ul class="list__subtitle">
+                        <li class="active">
+                            <span>SALE TẾT 2023</span>
+                            <span>Đăng kí nhận tin</span>
+                        </li>
+                        <li>
+                            <span>SALE TẾT 2023</span>
+                            <span>Đăng kí nhận tin</span>
+                        </li>
+                        <li>
+                            <span>SALE TẾT 2023</span>
+                            <span>Đăng kí nhận tin</span>
+                        </li>
+                        <li>
+                            <span>SALE TẾT 2023</span>
+                            <span>Đăng kí nhận tin</span>
+                        </li>
+                        <li>
+                            <span>SALE TẾT 2023</span>
+                            <span>Đăng kí nhận tin</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div id="btn__show-more"></div>
-            <div id="content"></div>
-
-            <div id="comment">
-                <div id="answer"></div>
-                <div id="reply"></div>
+            <div class="list__sale">
+                <a href="#">
+                    <img src="./public/image/RightBanner-fold3-12-new.webp" alt="" class="card__sale">
+                </a>
+                <a href="#">
+                    <img src="./public/image/RightBanner_2_699.webp" alt="" class="card__sale">
+                </a>
+                <a href="#">
+                    <img src="./public/image/RightBanner_690x300_ASUS-VIVOBOOK.webp" alt="" class="card__sale">
+                </a>
             </div>
         </div>
-
-        <div id="footer"></div>
     </div>
+
+
+    <!-- Content -->
+    <div id="content">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-3">
+                    <h2>Điện thoại nổi bật</h2>
+                </div>
+                <div class="col-9">
+                    <ul class="list__tag mt-3">
+                        <li>
+                            <div class="button__related_tag">Apple</div>
+                        </li>
+                        <li>
+                            <div class="button__related_tag">Apple</div>
+                        </li>
+                        <li>
+                            <div class="button__related_tag">Apple</div>
+                        </li>
+                        <li>
+                            <div class="button__related_tag">Apple</div>
+                        </li>
+                        <li>
+                            <div class="button__related_tag">Apple</div>
+                        </li>
+                        <li>
+                            <div class="button__related_tag">Apple</div>
+                        </li>
+                        <li>
+                            <div class="button__related_tag">Apple</div>
+                        </li>
+                        <li>
+                            <div class="button__related_tag">Apple</div>
+                        </li>
+                        <li>
+                            <div class="button__related_tag">Apple</div>
+                        </li>
+                        <li>
+                            <div class="button__related_tag">Xem tất cả</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- list Product -->
+            <div class="row">
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
