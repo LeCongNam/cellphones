@@ -1,5 +1,11 @@
 @import "./main.scss";
 
+
+#header{
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   background-color: $base-color;
   height: 64px;
@@ -113,6 +119,21 @@ header {
       }
     }
   }
+  
+}
+
+#breadcrumb{
+  width: 1200px;
+  margin: 64px auto;
+
+  &>ul{
+    display: flex;
+    padding-bottom: 0;
+
+    & li {
+      
+    }
+  }
 }
 
 
@@ -133,4 +154,9 @@ header {
   & a{
     display: block;
   }
+}
+
+
+#breadcrumb{
+  display: flex;
 }

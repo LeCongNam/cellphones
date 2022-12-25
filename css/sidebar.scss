@@ -17,6 +17,7 @@
   border-radius: 15px;
   position: relative;
   margin: 0;
+  z-index: 20;
 
   & span {
     margin-left: 5px;
@@ -42,11 +43,33 @@
       }
     }
   }
-  & li:hover {
+
+  &>li::after{
+    content: '';
+    width: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -10px;
+    display: none;
+    
+  }
+
+  &>li:hover {
     cursor: pointer;
   }
 
-  & li:hover .sidebar__details {
+  &>li:hover li::after{ 
+    cursor: pointer;
+    display: block;
+  }
+
+  &>li:hover .sidebar__details {
+    cursor: pointer;
+    visibility: visible;
+  }
+
+  &>li::after:hover .sidebar__details {
     cursor: pointer;
     visibility: visible;
   }
@@ -74,7 +97,11 @@
     min-height: 375px;
     background-color: #fff;
   }
+
 }
+
+
+
 
 #slider {
   box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%), 0 2px 6px 2px rgb(60 64 67 / 15%);
@@ -123,3 +150,4 @@
     }
   }
 }
+
