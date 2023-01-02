@@ -40,6 +40,10 @@
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+  cursor: pointer;
+  position: relative;
+  transition: top 2s ease-in 10s;
+
 
   & .cart__thumbnail {
     width: 160px;
@@ -117,6 +121,10 @@
 }
 
 
+.cart__container:hover {
+  top: -5px;
+}
+
 .category__container{
     width: 111px;
     height: 125px;
@@ -126,7 +134,6 @@
     border-radius: 10px;
     margin-right: 0px;
     margin-bottom: 10px;
-
 
     & .category__title{
         text-align: center;

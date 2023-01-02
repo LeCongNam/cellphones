@@ -1,11 +1,5 @@
 @import "./main.scss";
 
-
-#header{
-  display: flex;
-  flex-direction: column;
-}
-
 header {
   background-color: $base-color;
   height: 64px;
@@ -15,12 +9,16 @@ header {
   left: 0;
   right: 0;
   z-index: 999;
+  max-width: 100vw;
+  overflow: hidden;
 
   & .ctr {
     width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    max-width: 100%;
+    min-height: 100%;
 
     & svg.logo {
       width: 170px;
@@ -59,6 +57,7 @@ header {
       flex-direction: row;
       position: relative;
       width: 300px;
+      max-width: 300px;
       height: 34px;
       align-items: center;
 
@@ -122,41 +121,4 @@ header {
   
 }
 
-#breadcrumb{
-  width: 1200px;
-  margin: 64px auto;
 
-  &>ul{
-    display: flex;
-    padding-bottom: 0;
-
-    & li {
-      
-    }
-  }
-}
-
-
-
-
-
-.list__sale {
-  max-height: 375px;
-  height: 375px;
-
-  & .card__sale {
-    width: 100%;
-    margin-bottom: 16px;
-    height: 116px;
-    border-radius: 16px;
-  }
-
-  & a{
-    display: block;
-  }
-}
-
-
-#breadcrumb{
-  display: flex;
-}

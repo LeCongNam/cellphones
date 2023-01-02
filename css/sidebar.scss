@@ -7,6 +7,7 @@
 .sidebar {
   $width_sidebar: 205px;
   width: $width_sidebar;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -19,71 +20,63 @@
   margin: 0;
   z-index: 20;
 
-  & span {
-    margin-left: 5px;
-    padding-left: 10px;
-  }
-
-  & img {
-    width: 25px;
-    height: 25px;
-  }
-
-  & li {
+  & .item {
     display: flex;
     width: 100%;
 
-    & .list__child {
-      background-color: #ccc;
-      margin-top: 16px;
+    & .item__container {
+      padding: 3px 10px;
+      width: 100%;
+      display: flex;
 
-      & .child__item {
-        padding: 5px 0;
-        border: 1px solid #000;
+      & .item__title {
+        margin-left: 5px;
+        padding-left: 10px;
+        flex: 1;
+      }
+
+      & img {
+        width: 25px;
+        height: 25px;
+      }
+
+      & .list__child {
+        margin-top: 16px;
+        text-transform: none;
+
+        & .child__item {
+          font-size: 14px;
+          opacity: 0.6;
+          font-weight: 400;
+        }
+
+        .child__item:hover {
+          color: $base-color;
+        }
       }
     }
   }
 
-  &>li::after{
-    content: '';
+  & > .item::after {
+    content: "";
     width: 20px;
     position: absolute;
     top: 0;
     bottom: 0;
     right: -10px;
     display: none;
-    
   }
 
-  &>li:hover {
+  & > .item:hover {
     cursor: pointer;
   }
 
-  &>li:hover li::after{ 
+  & > .item:hover::after {
     cursor: pointer;
     display: block;
   }
 
-  &>li:hover .sidebar__details {
-    cursor: pointer;
-    visibility: visible;
-  }
-
-  &>li::after:hover .sidebar__details {
-    cursor: pointer;
-    visibility: visible;
-  }
-
-  & .item__container {
-    padding: 3px 10px;
-    width: 100%;
-    display: flex;
-
-    & .item__title {
-      flex: 1;
-    }
-  }
-
+  // sidebar__detail
   &__details {
     visibility: hidden;
     width: calc(1200px - $width_sidebar);
@@ -98,15 +91,25 @@
     background-color: #fff;
   }
 
+  & > .item:hover .sidebar__details {
+    cursor: pointer;
+    visibility: visible;
+  }
+
+  & > .item::after:hover .sidebar__details {
+    cursor: pointer;
+    visibility: visible;
+  }
 }
-
-
-
 
 #slider {
   box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%), 0 2px 6px 2px rgb(60 64 67 / 15%);
   overflow: hidden;
   border-radius: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .list__subtitle {
     display: flex;
@@ -120,7 +123,7 @@
         border-radius: 12px;
       }
 
-      & .bg__icon-slide{
+      & .bg__icon-slide {
         background-color: #000;
         padding: 20px;
         display: block;
@@ -132,22 +135,32 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding: 24px 22px;
+      padding: 18px 22px;
 
       & span {
         font-size: 12px;
       }
     }
 
-    & li.active {
+    & > li.active {
       border-bottom: 3px solid $base-color;
+      font-size: 14px;
+      flex: 1;
+
+      & > span:first-child {
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      & > span:last-child {
+        font-weight: 600;
+        font-weight: bold;
+      }
     }
 
-
-    & li:hover{
+    & li:hover {
       background-color: #f3f4f6;
       cursor: pointer;
     }
   }
 }
-

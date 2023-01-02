@@ -8,12 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
+
+    <!-- Swiperjs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Themify font -->
     <link rel="stylesheet" href="./public/font/themify-icons/themify-icons.css">
+
+    <!-- My Css -->
     <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/content.css">
     <link rel="stylesheet" href="./public/css/header.css">
+    <link rel="stylesheet" href="./public/css/breadcrumb.css">
+    <link rel="stylesheet" href="./public/css/detail_content.css">
+    <link rel="stylesheet" href="./public/css/swiper.css">
 </head>
 
 <body>
@@ -332,44 +343,844 @@
             <ul>
                 <!-- icon -->
                 <li>
-                    <a href="#">
+                    <div class="crumb__icon p-lg-1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10.633" viewBox="0 0 12 10.633">
                             <path id="home"
                                 d="M13.2,9.061H12.1v3.965a.6.6,0,0,1-.661.661H8.793V9.721H6.15v3.965H3.507a.6.6,0,0,1-.661-.661V9.061h-1.1c-.4,0-.311-.214-.04-.494L7,3.259a.634.634,0,0,1,.936,0l5.3,5.307c.272.281.356.495-.039.495Z"
                                 transform="translate(-1.471 -3.053)" fill="#d70018"></path>
                         </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Trang chủ
-                    </a>
+                    </div>
+                    <span class="mr-lg-2">Trang chủ</span>
                 </li>
                 <!-- icon -->
                 <li>
-                    <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                        <path
-                            d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
-                        </path>
-                    </svg>
+                    <div class="crumb__icon p-lg-2">
+                        <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="mr-lg-2">
+                        Máy tính bảng
+                    </span>
+                </li>
+
+                <!-- icon -->
+                <li>
+                    <div class="crumb__icon p-lg-2">
+                        <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="mr-lg-2">
+                        Máy tính bảng
+                    </span>
+                </li>
+
+                <!-- icon -->
+                <li>
+                    <div class="crumb__icon p-lg-2">
+                        <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path
+                                d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="mr-lg-2">
+                        Máy tính bảng
+                    </span>
                 </li>
             </ul>
         </div>
     </div>
 
 
+    <div class="container">
+        <div class="row justify-content-lg-start mt-lg-2">
+            <div class="col-lg-12">
+                <div class="product__title">
+                    <h1 class="product__name">Bao da Samsung Galaxy S22 Ultra Smart Clear View </h1>
+                    <p class="ml-lg-2 product__id">OP.S22U.09</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="category__prod_thumb">
+                    <div class="wrapper__swiper">
+                        <!-- Slider main container -->
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide"><img src="./public//image/6_23.webp" alt="" srcset=""></div>
+                                <div class="swiper-slide"><img src="./public//image/6_23.webp" alt="" srcset=""></div>
+                                <div class="swiper-slide"><img src="./public//image/5_34_1.webp" alt="" srcset=""></div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <!-- <div class="swiper-pagination"></div> -->
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <!-- scale small img -->
+                    <div class="wrapper__list_small">
+                        <!-- Slider main container -->
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide" style="width: 50px;">
+                                    <img src="./public//image/6_23.webp" alt="" srcset="">
+                                </div>
+                                <div class="swiper-slide" style="width: 50px;">
+                                    <img src="./public//image/6_23.webp" alt="" srcset="">
+                                </div>
+                                <div class="swiper-slide" style="width: 50px;">
+                                    <img src="./public//image/5_34_1.webp" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- price -->
+                <div class="row">
+                    <div class="col">
+                        <div class="price">
+                            <div class="sale__price">31.690.000 ₫</div>
+                            <div class="real__price">
+                                34.990.000 ₫
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- list price -->
+                <div class="row">
+                    <div class="col-lg-4 p-lg-1">
+                        <div class="price__container">
+                            <div class="price__option">1TB</div>
+                            <div class="price__corresponding">31.690.000 ₫</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 p-lg-1">
+                        <div class="price__container active">
+                            <div class="price__option">1TB</div>
+                            <div class="price__corresponding">31.690.000 ₫</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 p-lg-1">
+                        <div class="price__container">
+                            <div class="price__option">1TB</div>
+                            <div class="price__corresponding">31.690.000 ₫</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mt-lg-3 mb-lg-0">
+                    <div class="col-lg-12">
+                        <p class="title__desc">Chọn màu để xem giá và chi nhánh có hàng</p>
+                    </div>
+                </div>
+                <!-- list price and color -->
+                <div class="row">
+                    <div class="col-lg-4 p-lg-1">
+                        <div class="color__prod-container active">
+                            <img src="./public/image/5_34_1.webp" class="prod__img" alt="" srcset="">
+                            <div class="prod__desc ml-lg-2">
+                                <div class="prod__color">Trắng</div>
+                                <div class="prod__price">31.690.000 ₫</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 p-lg-1">
+                        <div class="color__prod-container active">
+                            <img src="./public/image/5_34_1.webp" class="prod__img" alt="" srcset="">
+                            <div class="prod__desc ml-lg-2">
+                                <div class="prod__color">Trắng</div>
+                                <div class="prod__price">31.690.000 ₫</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 p-lg-1">
+                        <div class="color__prod-container active">
+                            <img src="./public/image/5_34_1.webp" class="prod__img" alt="" srcset="">
+                            <div class="prod__desc ml-lg-2">
+                                <div class="prod__color">Trắng</div>
+                                <div class="prod__price">31.690.000 ₫</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 p-lg-1">
+                        <div class="color__prod-container active">
+                            <img src="./public/image/5_34_1.webp" class="prod__img" alt="" srcset="">
+                            <div class="prod__desc ml-lg-2">
+                                <div class="prod__color">Trắng</div>
+                                <div class="prod__price">31.690.000 ₫</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 p-lg-1">
+                        <div class="color__prod-container active">
+                            <img src="./public/image/5_34_1.webp" class="prod__img" alt="" srcset="">
+                            <div class="prod__desc ml-lg-2">
+                                <div class="prod__color">Trắng</div>
+                                <div class="prod__price">31.690.000 ₫</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Saleoff box-->
+                <div class="row mt-lg-3">
+                    <div class="box__sale">
+                        <div class="box__header">
+                            <span>
+                                <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M152 0H154.2C186.1 0 215.7 16.91 231.9 44.45L256 85.46L280.1 44.45C296.3 16.91 325.9 0 357.8 0H360C408.6 0 448 39.4 448 88C448 102.4 444.5 115.1 438.4 128H480C497.7 128 512 142.3 512 160V224C512 241.7 497.7 256 480 256H32C14.33 256 0 241.7 0 224V160C0 142.3 14.33 128 32 128H73.6C67.46 115.1 64 102.4 64 88C64 39.4 103.4 0 152 0zM190.5 68.78C182.9 55.91 169.1 48 154.2 48H152C129.9 48 112 65.91 112 88C112 110.1 129.9 128 152 128H225.3L190.5 68.78zM360 48H357.8C342.9 48 329.1 55.91 321.5 68.78L286.7 128H360C382.1 128 400 110.1 400 88C400 65.91 382.1 48 360 48V48zM32 288H224V512H80C53.49 512 32 490.5 32 464V288zM288 512V288H480V464C480 490.5 458.5 512 432 512H288z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span>Khuyến mãi</span>
+                        </div>
+
+                        <ul class="list__detail">
+                            <li>
+                                <span>1</span>
+                                <span>Giảm thêm đến 2 triệu khi thanh toán qua ví/ngân hàng MSB, Moca, VNPAY,...</span>
+                            </li>
+
+                            <li>
+                                <span>1</span>
+                                <span>Giảm thêm đến 2 triệu khi thanh toán qua ví/ngân hàng MSB, Moca, VNPAY,...</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- <div class="col-lg-12"> -->
+                    <!-- <div class="box__sale">
+                            <div class="box__header">
+                                <span>
+                                    <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M152 0H154.2C186.1 0 215.7 16.91 231.9 44.45L256 85.46L280.1 44.45C296.3 16.91 325.9 0 357.8 0H360C408.6 0 448 39.4 448 88C448 102.4 444.5 115.1 438.4 128H480C497.7 128 512 142.3 512 160V224C512 241.7 497.7 256 480 256H32C14.33 256 0 241.7 0 224V160C0 142.3 14.33 128 32 128H73.6C67.46 115.1 64 102.4 64 88C64 39.4 103.4 0 152 0zM190.5 68.78C182.9 55.91 169.1 48 154.2 48H152C129.9 48 112 65.91 112 88C112 110.1 129.9 128 152 128H225.3L190.5 68.78zM360 48H357.8C342.9 48 329.1 55.91 321.5 68.78L286.7 128H360C382.1 128 400 110.1 400 88C400 65.91 382.1 48 360 48V48zM32 288H224V512H80C53.49 512 32 490.5 32 464V288zM288 512V288H480V464C480 490.5 458.5 512 432 512H288z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <span>Khuyến mãi</span>
+                            </div>
+
+                            <ul class="list__detail">
+                                <li>
+                                    <span>1</span>
+                                    <span>Giảm thêm đến 2 triệu khi thanh toán qua ví/ngân hàng MSB, Moca, VNPAY,...</span>
+                                </li>
+
+                                <li>
+                                    <span>1</span>
+                                    <span>Giảm thêm đến 2 triệu khi thanh toán qua ví/ngân hàng MSB, Moca, VNPAY,...</span>
+                                </li>
+                            </ul>
+                        </div> -->
+                    <!-- </div> -->
+                </div>
+
+                <div class="row mt-lg-3">
+                    <div class="order__container">
+                        <button class="buy__now">
+                            <span>Mua ngay</span>
+                            <span>(Giao tận nơi hoặc lấy tại cửa hàng)</span>
+                        </button>
+
+                        <button class="add__cart ml-lg-3">
+                            <span>
+                                <img src="https://cdn2.cellphones.com.vn/50x,webp,q70/media/wysiwyg/add-to-cart.png"
+                                    alt="">
+                            </span>
+                            <span>Thêm vào giỏ</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- select Location -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <button class="location">Hồ chí minh</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <select class="form-select form-select-lg" id="select__pd" aria-label=".form-select-lg example">
+                            <option selected disabled>Quận/Huyện</option>
+                            <option value="1">Quận 1</option>
+                            <option value="1">Quận 2</option>
+                            <option value="1">Quận 3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- title  -->
+                <div class="row col-lg-12 mt-lg-2">
+                    <p>Có</p>
+                    <p class="prod__quantity">18</p>
+                    <p> cửa hàng có sản phẩm</p>
+                </div>
+
+                <!--  list store -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="list_store_tb">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <svg height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path
+                                                    d="M511.2 387l-23.25 100.8c-3.266 14.25-15.79 24.22-30.46 24.22C205.2 512 0 306.8 0 54.5c0-14.66 9.969-27.2 24.22-30.45l100.8-23.25C139.7-2.602 154.7 5.018 160.8 18.92l46.52 108.5c5.438 12.78 1.77 27.67-8.98 36.45L144.5 207.1c33.98 69.22 90.26 125.5 159.5 159.5l44.08-53.8c8.688-10.78 23.69-14.51 36.47-8.975l108.5 46.51C506.1 357.2 514.6 372.4 511.2 387z">
+                                                </path>
+                                            </svg>
+                                        </td>
+                                        <td><a href="tel:02871088001">02871088001</a></td>
+                                        <td>
+                                            <a href="https://g.page/r/CcUv-Bg4yfcvEAE">
+                                                <svg data-v-3d12cbdc="" height="15" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 384 512">
+                                                    <path data-v-3d12cbdc=""
+                                                        d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z">
+                                                    </path>
+                                                </svg>
+                                                1K Nguyễn Ảnh Thủ, khu phố 1, phường Hiệp Thành, Quận 12
+                                        </td>
+                                        </a>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        .swiper {
+            width: 100%;
+            height: 300px;
+            margin: 20px auto;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 300px;
+            margin: 20px auto;
+        }
+
+        .append-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .append-buttons button {
+            display: inline-block;
+            cursor: pointer;
+            border: 1px solid #007aff;
+            color: #007aff;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin: 0 10px;
+            font-size: 13px;
+        }
+    </style>
+
+    <!-- the same product -->
+
+
+
+    <!-- introduction product -->
+    <div class="container mt-lg-3">
+        <div class="row">
+            <div class="col-lg-8 p-lg-2">
+                <div class="post">
+                    <div class="post__content">
+                        <h2>Samsung Galaxy S22 Ultra bao da Samsung Clear View - Thiết kế tinh tế</h2>
+                        <p>
+                            Bao da Clear View Samsung Galaxy S22 Ultra là một phụ kiện dùng để bảo vệ thông minh dành
+                            cho siêu phẩm S22 Ultra. Không chỉ là một sản phẩm điện thoại thông minh mà bao da Samsung
+                            Galaxy S22 Ultra bảo vệ của nó vô cùng đắt giá cho đến thời điểm hiện tại của Samsung. Và để
+                            hiểu hơn về sản phẩm này, hãy cùng mình theo dõi bài viết bên dưới đây nhé!
+                        </p>
+                        <p>
+                            <b>Thiết kế tiện lợi, nhìn xuyên thấu và dễ dàng trong quá trình thao tác</b>
+                        </p>
+                        <p>
+                            Bao da Clear View Samsung Galaxy S22 Ultra giúp dễ dàng kiểm tra và theo dõi các thông báo
+                            được
+                            hiển thị trên điện thoại mà không cần phải mở nắp bảo vệ. Cũng như là người dùng có thể điều
+                            khiển nhanh chóng chỉ với thao tác chạm vuốt mà cũng không cần phải mở nắp bảo vệ.
+                        </p>
+
+                        <img src="./public/image/bao-da-samsung-galaxy-s22-ultra-clearview-1.webp" alt="">
+                       
+                        <p class="mt-lg-3">
+                            <b>Sử dụng chất liệu cao cấp để sản xuất, giúp giảm bám các dấu vân tay, cũng như là bám bụi</b>
+                        </p>
+                        <p>
+                            cho vẻ ngoài bao da mang tính thẩm mỹ cao hơn, đồng thời cũng nhờ đó mà cũng giảm thiểu được
+                            khả năng trơn trượt, rơi điện thoại khi sử dụng.
+                        </p>
+                        <p>
+                            <b>Mua ngay bao da Clear View Samsung Galaxy S22 Ultra tại CellphoneS</b>
+                        </p>
+                        <p>
+                        Nếu bạn đang có ý định mua chiếc bao da này mà vẫn chưa tìm ra được nơi mua hàng nào cảm
+                        thấy an tâm thì bạn có thể cân nhắc về việc đến với CellphoneS để có thể sở hữu cho mình
+                        ngay sản phẩm này nhé!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-lg-0">
+                <div class="spect__content">
+                    <p class="title">
+                        Thông số kỹ thuật
+                    </p>
+
+                    <div class="spect__wrapper">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            // direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
+
+
+    <script>
+        var swipers = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+        var appendNumber = 4;
+        var prependNumber = 1;
+        document
+            .querySelector(".prepend-2-slides")
+            .addEventListener("click", function (e) {
+                e.preventDefault();
+                swiper.prependSlide([
+                    '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+                    '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+                ]);
+            });
+        document
+            .querySelector(".prepend-slide")
+            .addEventListener("click", function (e) {
+                e.preventDefault();
+                swiper.prependSlide(
+                    '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
+                );
+            });
+        document
+            .querySelector(".append-slide")
+            .addEventListener("click", function (e) {
+                e.preventDefault();
+                swiper.appendSlide(
+                    '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
+                );
+            });
+        document
+            .querySelector(".append-2-slides")
+            .addEventListener("click", function (e) {
+                e.preventDefault();
+                swiper.appendSlide([
+                    '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+                    '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+                ]);
+            });
+    </script>
+
 </body>
 
 </html>
